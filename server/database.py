@@ -6,12 +6,10 @@ import json
 from bson.json_util import dumps
 
 
-# client = pymongo.MongoClient("localhost", 27017)
+client = pymongo.MongoClient("localhost", 27017)
 # uncomment the line below to run locally
-# client = motor.motor_asyncio.AsyncIOMotorClient("mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb")
-client = motor.motor_asyncio.AsyncIOMotorClient(
-   "mongodb+srv://tanvinsharma:tanvin123@crud-cluster.ddcle.mongodb.net/db?retryWrites=true&w=majority"
-   "&ssl_cert_reqs=CERT_NONE")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb")
+
 
 
 collection = client.db.crud_collection
